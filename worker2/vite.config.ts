@@ -15,6 +15,7 @@ export default defineConfig({
   plugins: [
     cloudflareDevProxyVitePlugin({
       configPath: `${__dirname}/wrangler.toml`,
+      persist: {path:`${__dirname}/.wrangler/state/v3`},
     }),
     remix({
       future: {
